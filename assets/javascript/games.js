@@ -20,9 +20,9 @@
 
     // Create loop
     // for (var i = 1; i < 4; i++){}
-// run a loop 5 times to allow for 5 guesses
+    // run a loop 5 times to allow for 5 guesses
 
-document.onkeyup = function(event) {
+    document.onkeyup = function(event) {
 
     // Determines which key was pressed.
     userGuess = event.key;
@@ -37,24 +37,22 @@ document.onkeyup = function(event) {
             console.log("User chose " + userGuess);
             console.log("Computer chose " + computerGuess);
             userChoiceText.textContent = "Your guesses so far: " + userGuess;
-            winsText.textContent = "Wins: " + wins;
-            
+            winsText.textContent = "Wins: " + wins;            
           }
+
+        // Only run the following code if user is wrong
         if (userGuess !== computerGuess) {
             losses++;
             lossesText.textContent = "Losses: " + losses;
             userChoiceText.textContent = "Your guesses so far: " + userGuess;
             console.log("Computer wins!");
             console.log("User chose " + userGuess);
-            console.log("Computer chose " + computerGuess);
-            //console.log("User guess is " + userGuess);
-            //console.log("Computer guess is " + computerGuess);
-            //console.log("Total losses: " + losses);                    
+            console.log("Computer chose " + computerGuess);               
           }
-          var guesses = wins + losses;
-          var guessCounter = 5 - guesses;
-          console.log(guesses);
-          guessesLeft.textContent = "Guesses left: " + guessCounter;
+            var guesses = wins + losses;
+            var guessCounter = 5 - guesses;
+            console.log(guesses);
+            guessesLeft.textContent = "Guesses left: " + guessCounter;
 
           if (guesses > 5) {
               console.log ("game is over");
@@ -73,22 +71,6 @@ document.onkeyup = function(event) {
     losses = "";
     console.log("NO more guesses left");
 
-     //   console.log("-----------");
-     
-      
-      //alert("Game Over");
-
-      
-      // userChoiceText.textContent = "You chose: " + userGuess;
-      //computerChoiceText.textContent = "The computer chose: " + computerGuess;
-      //winsText.textContent = "wins: " + wins;
-     // lossesText.textContent = "losses: " + losses;
-        //console.log("Computer Guess: " + computerGuess);
-        //console.log(userGuess);
-
-
-        
-        // Display the user wins, losses, guesses left and user guesses so far
 
     
     
